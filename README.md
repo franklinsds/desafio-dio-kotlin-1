@@ -25,7 +25,7 @@
 - Criar projeto --OK
 - Criar modelo Lesson --OK
 - Criar modelo Course : Lesson --OK
-- Criar modelo ProjectChallenge : Lesson
-- Criar modelo CodeChallenge : Lesson
-- Criar modelo Estudante
-- Criar modelo Formação
+- Criar modelo ProjectChallenge : Lesson --OK
+- Criar modelo CodeChallenge : Lesson --OK
+- Criar modelo Student --OK
+- Criar modelo TeachingPlan

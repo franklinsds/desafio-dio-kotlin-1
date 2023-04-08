@@ -2,6 +2,9 @@ import enuns.LessonTier
 import models.CodeChallenge
 import models.Course
 import models.ProjectChallenge
+import models.Student
+import java.time.LocalDate
+import java.util.*
 
 var course1: Course? = null;
 var course2: Course? = null;
@@ -19,11 +22,21 @@ var codeChallenge1: CodeChallenge? = null;
 var codeChallenge2: CodeChallenge? = null;
 var codeChallenge3: CodeChallenge? = null;
 
+var student1: Student? = null;
+var student2: Student? = null;
+var student3: Student? = null;
+var student4: Student? = null;
+var student5: Student? = null;
+
 fun main() {
+    createMockData();
+    print(student4);
+}
+fun createMockData(): Unit{
     createCourses();
     createProjectChallenges()
     createCodeChallenges()
-    print(course1);
+    createStudents()
 }
 fun createCourses(): Unit{
     course1 = Course(
@@ -105,4 +118,31 @@ fun createCodeChallenges(): Unit{
         courseLoad = 4,
         lessonTier = LessonTier.Avançado
     )
+}
+fun createStudents(): Unit{
+    student1 = Student(
+        name = "Ana",
+        email = "ana@email.com",
+        registrationDate = LocalDate.of(2023,4,2)
+    );
+    student2 = Student(
+        name = "Ze",
+        email = "ze@email.com",
+        registrationDate = LocalDate.of(2023,4,22)
+    );
+    student3 = Student(
+        name = "Sara",
+        email = "sara@email.com",
+        registrationDate = LocalDate.of(2023,4,8)
+    );
+    student4 = Student(
+        name = "Bia",
+        email = "bia@email.com",
+        registrationDate = LocalDate.of(2023,4,10)
+    );
+    student5 = Student(
+        name = "Jao",
+        email = "jao@email.com",
+        registrationDate = LocalDate.of(2023,4,19)
+    );
 }
