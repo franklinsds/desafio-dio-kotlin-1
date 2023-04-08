@@ -1,22 +1,28 @@
 import enuns.LessonTier
+import models.CodeChallenge
 import models.Course
 import models.ProjectChallenge
 
 var course1: Course? = null;
-    var course2: Course? = null;
-    var course3: Course? = null;
-    var course4: Course? = null;
-    var course5: Course? = null;
-    var course6: Course? = null;
-    var course7: Course? = null;
+var course2: Course? = null;
+var course3: Course? = null;
+var course4: Course? = null;
+var course5: Course? = null;
+var course6: Course? = null;
+var course7: Course? = null;
 
-    var projectChallenge1: ProjectChallenge? = null;
-    var projectChallenge2: ProjectChallenge? = null;
-    var projectChallenge3: ProjectChallenge? = null;
+var projectChallenge1: ProjectChallenge? = null;
+var projectChallenge2: ProjectChallenge? = null;
+var projectChallenge3: ProjectChallenge? = null;
+
+var codeChallenge1: CodeChallenge? = null;
+var codeChallenge2: CodeChallenge? = null;
+var codeChallenge3: CodeChallenge? = null;
 
 fun main() {
     createCourses();
     createProjectChallenges()
+    createCodeChallenges()
     print(course1);
 }
 fun createCourses(): Unit{
@@ -78,6 +84,25 @@ fun createProjectChallenges(): Unit{
     projectChallenge3 = ProjectChallenge(
         description = "Projeto de Spring FrameWork",
         courseLoad = 2,
+        lessonTier = LessonTier.Avançado
+    )
+}
+fun createCodeChallenges(): Unit{
+    codeChallenge1 = CodeChallenge(
+        description = "Desafio de Java",
+        courseLoad = 2,
+        lessonTier = LessonTier.Básico
+    )
+
+    codeChallenge2 = CodeChallenge(
+        description = "Desafio de Kotlin",
+        courseLoad = 2,
+        lessonTier = LessonTier.Intermediário
+    )
+
+    codeChallenge3 = CodeChallenge(
+        description = "Desafio de Spring FrameWork",
+        courseLoad = 4,
         lessonTier = LessonTier.Avançado
     )
 }
