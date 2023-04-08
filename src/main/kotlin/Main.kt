@@ -1,19 +1,58 @@
-enum class Nivel { BASICO, INTERMEDIARIO, DIFICIL }
+import enuns.LessonTier
+import models.Course
 
-class Usuario
-
-data class ConteudoEducacional(var nome: String, val duracao: Int = 60)
-
-data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) {
-
-    val inscritos = mutableListOf<Usuario>()
-
-    fun matricular(usuario: Usuario) {
-        TODO("Utilize o parâmetro $usuario para simular uma matrícula (usar a lista de $inscritos).")
-    }
-}
+    var course1: Course? = null;
+    var course2: Course? = null;
+    var course3: Course? = null;
+    var course4: Course? = null;
+    var course5: Course? = null;
+    var course6: Course? = null;
+    var course7: Course? = null;
 
 fun main() {
-//    TODO("Analise as classes modeladas para este domínio de aplicação e pense em formas de evoluí-las.")
-//    TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
+    createCourses();
+    print(course1);
+}
+fun createCourses(): Unit{
+    course1 = Course(
+        description = "Princípios de Agilidade e Desenvolvimento de Software",
+        courseLoad = 10,
+        lessonTier = LessonTier.Básico
+    )
+
+    course2 = Course(
+        description = "Introdução ao Java",
+        courseLoad = 8,
+        lessonTier = LessonTier.Básico
+    )
+
+    course3 = Course(
+        description = "Aprofundando em Java",
+        courseLoad = 10,
+        lessonTier = LessonTier.Intermediário
+    )
+
+    course4 = Course(
+        description = "Introdução ao Kotlin",
+        courseLoad = 6,
+        lessonTier = LessonTier.Básico
+    )
+
+    course5 = Course(
+        description = "Aprofundando em Kotlin",
+        courseLoad = 8,
+        lessonTier = LessonTier.Intermediário
+    )
+
+    course6 = Course(
+        description = "Spring FrameWork",
+        courseLoad = 16,
+        lessonTier = LessonTier.Avançado
+    )
+
+    course7 = Course(
+        description = "Docker",
+        courseLoad = 14,
+        lessonTier = LessonTier.Avançado
+    )
 }
