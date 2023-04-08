@@ -28,6 +28,14 @@
 - Criar modelo ProjectChallenge : Lesson --OK
 - Criar modelo CodeChallenge : Lesson --OK
 - Criar modelo Student --OK
-- Criar modelo TeachingPlan
-  - Adicionar Student
-  - Adicionar Lesson
+- Criar modelo TeachingPlan --Ok
+  - Adicionar Student --OK
+  - Adicionar Lesson --OK
+- Criar Visualização
+  - Nome do curso --OK
+  - Carga Horária Total --OK
+  - Quantidade de Aulas --OK
+  - Quantidade de Desafios --OK
+  - Quantidade de Alunos --OK
+- Comentar
+- Formatar readme

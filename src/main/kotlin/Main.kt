@@ -37,8 +37,8 @@ fun main() {
         addLesson(course1!!,course2!!,course3!!,course4!!,course5!!,course6!!,course7!!);
         addLesson(projectChallenge1!!,projectChallenge2!!,projectChallenge3!!);
         addLesson(codeChallenge1!!,codeChallenge2!!,codeChallenge3!!);
-        println(subscribed);
-        println(lessons);
+
+        showOverView();
     }
 }
 fun createMockData(): Unit{
@@ -124,7 +124,7 @@ fun createCodeChallenges(): Unit{
 
     codeChallenge3 = CodeChallenge(
         description = "Desafio de Spring FrameWork",
-        courseLoad = 4,
+        courseLoad = 3,
         lessonTier = LessonTier.Avançado
     )
 }
