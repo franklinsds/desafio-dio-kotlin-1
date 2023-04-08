@@ -1,7 +1,6 @@
 package models
 
-import enuns.LessonTier
-import enuns.LessonType
+import enuns.*
 import interfaces.Lesson
 
 data class Course(

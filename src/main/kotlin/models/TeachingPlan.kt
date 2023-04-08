@@ -1,50 +1,46 @@
 package models
 
-import enuns.LessonType
-import interfaces.Lesson
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+
+import enuns.LessonType
+import interfaces.Lesson
 
 data class TeachingPlan(
     val description: String,
     val endDate: LocalDate
 ){
-    val subscribed: MutableSet<Student> = mutableSetOf();
-    val lessons: MutableSet<Lesson> = mutableSetOf();
+    private val subscribed: MutableSet<Student> = mutableSetOf()
+    private val lessons: MutableSet<Lesson> = mutableSetOf()
 
     fun addStudent(vararg students: Student){
-        this.subscribed.addAll(students);
+        this.subscribed.addAll(students)
     }
     fun addLesson(vararg lessons: Lesson){
-        this.lessons.addAll(lessons);
+        this.lessons.addAll(lessons)
     }
 
-    fun showOverView(): Unit{
-        println();
-        println(description);
+    /* Shows in console some current data from the teaching plan */
+    fun showOverView(){
+        println()
+        println(description)
         println("Data limite para conclusão: ${endDate.format(
             DateTimeFormatter.ofPattern("dd/MM/yyyy")
-        )}");
+        )}")
         println("Tempo total dos módulos: ${
             lessons
                 .map { it.courseLoad }
                 .reduce { acc, i ->  acc + i}
-        }hrs");
+        }hrs")
         println("Quantidade de Aulas: ${
-            lessons
-                .filter { it.lessonType == LessonType.Course }
-                .count()
-        }");
+            lessons.count { it.lessonType == LessonType.Course }
+        }")
         println("Quantidade de Desafios de Código: ${
-            lessons
-                .filter { it.lessonType == LessonType.CodeChallenge }
-                .count()
-        }");
+            lessons.count { it.lessonType == LessonType.CodeChallenge }
+        }")
         println("Quantidade de Desafios de Projeto: ${
-            lessons
-                .filter { it.lessonType == LessonType.ProjectChallenge }
-                .count()
-        }");
-        println("Quantidade de Inscritos: ${subscribed.count()}");
+            lessons.count { it.lessonType == LessonType.ProjectChallenge }
+        }")
+        println("Quantidade de Inscritos: ${subscribed.count()}")
     }
 }
