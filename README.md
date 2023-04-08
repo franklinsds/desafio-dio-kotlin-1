@@ -29,3 +29,5 @@
 - Criar modelo CodeChallenge : Lesson --OK
 - Criar modelo Student --OK
 - Criar modelo TeachingPlan
+  - Adicionar Student
+  - Adicionar Lesson

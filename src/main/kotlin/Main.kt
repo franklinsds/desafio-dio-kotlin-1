@@ -1,10 +1,6 @@
 import enuns.LessonTier
-import models.CodeChallenge
-import models.Course
-import models.ProjectChallenge
-import models.Student
+import models.*
 import java.time.LocalDate
-import java.util.*
 
 var course1: Course? = null;
 var course2: Course? = null;
@@ -30,7 +26,20 @@ var student5: Student? = null;
 
 fun main() {
     createMockData();
-    print(student4);
+
+    val teachingPlan1 = TeachingPlan(
+        description = "Formação \"Bootcamp TQI Kotlin - Backend Developer\"",
+        endDate = LocalDate.of(2023,5,20)
+    )
+
+    teachingPlan1.run {
+        addStudent(student1!!, student2!!, student3!!, student4!!, student5!!);
+        addLesson(course1!!,course2!!,course3!!,course4!!,course5!!,course6!!,course7!!);
+        addLesson(projectChallenge1!!,projectChallenge2!!,projectChallenge3!!);
+        addLesson(codeChallenge1!!,codeChallenge2!!,codeChallenge3!!);
+        println(subscribed);
+        println(lessons);
+    }
 }
 fun createMockData(): Unit{
     createCourses();
