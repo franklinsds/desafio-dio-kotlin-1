@@ -11,9 +11,12 @@ var course1: Course? = null;
     var course7: Course? = null;
 
     var projectChallenge1: ProjectChallenge? = null;
+    var projectChallenge2: ProjectChallenge? = null;
+    var projectChallenge3: ProjectChallenge? = null;
 
 fun main() {
     createCourses();
+    createProjectChallenges()
     print(course1);
 }
 fun createCourses(): Unit{
@@ -56,6 +59,25 @@ fun createCourses(): Unit{
     course7 = Course(
         description = "Docker",
         courseLoad = 14,
+        lessonTier = LessonTier.Avançado
+    )
+}
+fun createProjectChallenges(): Unit{
+    projectChallenge1 = ProjectChallenge(
+        description = "Projeto de Java",
+        courseLoad = 2,
+        lessonTier = LessonTier.Intermediário
+    )
+
+    projectChallenge2 = ProjectChallenge(
+        description = "Projeto de Kotlin",
+        courseLoad = 2,
+        lessonTier = LessonTier.Intermediário
+    )
+
+    projectChallenge3 = ProjectChallenge(
+        description = "Projeto de Spring FrameWork",
+        courseLoad = 2,
         lessonTier = LessonTier.Avançado
     )
 }
