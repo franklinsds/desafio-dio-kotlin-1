@@ -1,13 +1,16 @@
 import enuns.LessonTier
 import models.Course
+import models.ProjectChallenge
 
-    var course1: Course? = null;
+var course1: Course? = null;
     var course2: Course? = null;
     var course3: Course? = null;
     var course4: Course? = null;
     var course5: Course? = null;
     var course6: Course? = null;
     var course7: Course? = null;
+
+    var projectChallenge1: ProjectChallenge? = null;
 
 fun main() {
     createCourses();
