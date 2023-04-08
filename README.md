@@ -23,9 +23,9 @@
 
 ### To-Do
 - Criar projeto --OK
-- Criar modelo Aula
-- Criar modelo Curso : Aula
-- Criar modelo Desafio Projeto : Aula
-- Criar modelo Desafio Código : Aula
-- Criar modelo Inscrito
+- Criar modelo Lesson --OK
+- Criar modelo Course : Lesson --OK
+- Criar modelo ProjectChallenge : Lesson
+- Criar modelo CodeChallenge : Lesson
+- Criar modelo Estudante
 - Criar modelo Formação
